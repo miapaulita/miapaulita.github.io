@@ -368,9 +368,10 @@ body{
 .container{
   padding: 10px, 50px;
   position: relative;
-  width: 50%; /*This is the space from the left container to the timeline line */
+  width: 47%; /*This is the space from the left container to the timeline line */
   animation: movedown 1s linear forwards;
   opacity: 0;
+  margin-bottom: 40px; 
 }
 @keyframes movedown {
   0%{
@@ -400,8 +401,8 @@ body{
 }
 
 .text-box{
-  padding: 20px 30px;
-  background: pink;
+  padding: 20px 30px; /* padding surrounding the text */
+  background: rgb(197, 191, 191);
   position: relative;
   border-radius: 6px;
   font-size: 15px;
@@ -412,20 +413,20 @@ body{
 }
 
 .right-container{
-  left: 50% /*This is the space from the right container to the timeline line*/
+  left: 53% /*This is the space from the right container to the timeline line*/
 }
 
 .container img{
-  position: absolute;
+  position: 50%;
   width: 40px;
   border-radius: 50%;
-  right: -20px; /*The location of the picture on the line (this is centered to the page) */
+  right: -50px; /*The location of the picture on the line (this is centered to the page) */
   top: 32px;
   z-index: 10;
 }
 
 .right-container img{
-  left: -20px;  /*The location of the picture on the line (this is centered to the page) */
+  left: -50px;  /*The location of the picture on the line (this is centered to the page) */
 }
 
 .timeline::after{
@@ -482,16 +483,17 @@ body{
   left: -15px;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 600px) { /*mobile view, this re-adjusts the components */
   .timeline{
     margin: 50px auto;
   }
   .timeline::after{
-    left:31 px;
+    left: 80px;
+    /* original: left:31 px; */
   }
   .container{
     width: 100%;
-    padding-left: 80px;
+    padding-left: 100px; /*80 px; this is the placement from the left border of the screen */
     padding-right: 25px;
   }
   .text-box{
@@ -503,13 +505,24 @@ body{
   .right-container{
     left: 0;
   }
+
+  .container img {
+    position: absolute;
+    width: 50px; /* Adjust image size as needed */
+    border-radius: 50%;
+    top: -5px;
+    right: -15px;
+    transform: translateY(50%);
+  }
+
   .left-container img, .right-container img{
-    left: 10px;
+    left: -15%;
+    right: auto;
   }
   .left-container-arrow, .right-container-arrow{
-    border-right: 15px solid rgba(128, 128, 128, 0.535);
+    border-right: 15px solid grey; /*Size of the arrow*/
     border-left: 0;
-    left: -15px;
+    left:-15px; /*Placement offeset from the container */
   }
 
 }
