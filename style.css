@@ -1,4 +1,4 @@
-/* GENERAL */
+/* -------- GENERAL -------- */
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
 
@@ -6,7 +6,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  /*new*/
+
 }
 
 body {
@@ -32,14 +32,14 @@ p {
   color: black;
 }
 
-/* TRANSITION */
+/* -------- TRANSITION -------- */
 
 a,
 .btn {
   transition: all 300ms ease;
 }
 
-/* DESKTOP NAV */
+/* -------- DESKTOP NAV -------- */
 
 
 nav,
@@ -82,7 +82,7 @@ a:hover {
   cursor: default;
 }
 
-/* HAMBURGER MENU */
+/* ------- HAMBURGER MENU ------- */
 
 #hamburger-nav {
   display: none;
@@ -162,7 +162,7 @@ a:hover {
   transform: none;
 }
 
-/* SECTIONS */
+/* --------- SECTIONS --------- */
 
 section {
   padding-top: 4vh;
@@ -176,7 +176,7 @@ section {
   display: flex;
 }
 
-/* PROFILE SECTION */
+/* ========== MAIN PROFILE ========== */
 
 #profile {
   display: flex;
@@ -226,14 +226,14 @@ section {
   gap: 1rem;
 }
 
-/* ICONS */
+/* -------- ICONS -------- */
 
 .icon {
   cursor: pointer;
   height: 2rem;
 }
 
-/* BUTTONS */
+/* -------- BUTTONS -------- */
 
 .btn-container {
   display: flex;
@@ -281,7 +281,8 @@ section {
   gap: 1rem;
 }
 
-/* ABOUT SECTION */
+/* ========= ABOUT ME ========== */
+
 
 #about {
   position: relative;
@@ -342,7 +343,7 @@ section {
     z-index: 1;
 } */
 
-/* EXPERIENCE SECTION */
+/* ========= EXPERIENCE ========== */
 
 #experience {
   position: relative;
@@ -381,14 +382,18 @@ article .icon {
   cursor: default;
 }
 
-/* TIMELINE SECTION */
+/* ========= TIMELINE ========== */
 
 #timeline{
 position: relative;
 margin-bottom: 20px;
 max-width: 1200px;
-margin: 100px auto;
-height: 1200px;
+margin: auto;
+height: fit-content;
+}
+
+#timeline .title {
+  margin-top: 20px; /* Adjust the value as needed */
 }
 
 
@@ -398,9 +403,8 @@ height: 1200px;
   width: 47%;
   /*This is the space from the left container to the timeline line */
   animation: movedown 1s linear forwards;
-
   opacity: 0;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 }
 
 @keyframes movedown {
@@ -474,7 +478,7 @@ height: 1200px;
   width: 6px;
   height: 100%;
   background: rgba(255, 255, 255, 0.58);
-  top: 0;
+  top: 133px;
   left: 50%;
   margin-left: -3px;
   z-index: -1;
@@ -487,7 +491,7 @@ height: 1200px;
   }
 
   100% {
-    height: 100%;
+    height: 90%;
   }
 }
 
@@ -529,6 +533,7 @@ height: 1200px;
   /*mobile view, this re-adjusts the components */
   .timeline {
     margin: 50px auto;
+
   }
 
   .timeline::after {
@@ -583,7 +588,7 @@ height: 1200px;
 }
 
 
-/* PROJECTS SECTION */
+/* ========= PROJECTS ========== */
 
 #projects {
   position: relative;
@@ -610,7 +615,7 @@ height: 1200px;
   border-color: rgb(163, 163, 163);
 }
 
-/* CONTACT */
+/* ========= CONTACT ME ========== */
 
 #contact {
   display: flex;
@@ -650,7 +655,8 @@ height: 1200px;
   height: 2.5rem;
 }
 
-/* FOOTER SECTION */
+/* ========= FOOTER SECTION ========== */
+
 
 footer {
   height: 26vh;
@@ -661,30 +667,14 @@ footer p {
   text-align: center;
 }
 
-/* Hosted Events */
+/* ========= HOSTED EVENTS ========== */
 
 #hosted-events{
   position: relative;
 }
 
 
-
-
-
-
-
-
-
-
-
-
-/*
-
-THIS IS A CAROUSEL (PRACTICE)
-
-*/
-
-/* DONE */
+/* ========= WICS PAGE CAROUSEL ========== */
 #wicspage {
   display: flex;
   padding: 0 35px;
@@ -693,13 +683,13 @@ THIS IS A CAROUSEL (PRACTICE)
   min-height: 100vh;
 }
 
-/* DONE */
+
 .wrapper {
   max-width: 1200px;
   position: absolute;
 }
 
-/* DONE */
+
 .wrapper i {
   top: 50%;
   height: 46px;
@@ -714,18 +704,18 @@ THIS IS A CAROUSEL (PRACTICE)
   transform: translateY(-50%);
 }
 
-/* DONE */
+
 .wrapper i:first-child {
   left: -60px;
   display: none;
 }
 
-/* DONE */
+
 .wrapper i:last-child {
   right: -60px;
 }
 
-/* DONE */
+
 .wrapper .carousel {
   font-size: 0px;
   cursor: pointer;
@@ -734,39 +724,39 @@ THIS IS A CAROUSEL (PRACTICE)
   scroll-behavior: smooth;
 }
 
-/* DONE */
+
 .carousel.dragging {
   cursor: grab;
   scroll-behavior: auto;
 }
 
-/* DONE */
+
 .carousel.dragging img {
   pointer-events: none;
 }
 
-/* DONE */
+
 .carousel img {
   object-fit: cover;
   margin-left: 14px;
   width: calc(100% / 3);
 }
 
-/* DONE */
+
 .carousel img:first-child {
   margin-left: 0px;
 }
 
-/* DONE */
+
 @media screen and (max-width: 900px) {
   .carousel img {
     width: calc(100%/2);
   }
 }
 
-/* DONE */
 @media screen and (max-width: 550px) {
   .carousel img {
     width: 100%;
   }
 }
+

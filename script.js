@@ -1,3 +1,4 @@
+// ======== MENU =======
 function toggleMenu() {
   const menu = document.querySelector(".menu-links");
   const icon = document.querySelector(".hamburger-icon");
@@ -5,15 +6,14 @@ function toggleMenu() {
   icon.classList.toggle("open");
 }
 
-// Carousel Section DONE
+// ======== CAROUSEL =======
 const carousel = document.querySelector(".carousel"),
 firstImg = carousel.querySelectorAll("img")[0];
 arrowIcons = document.querySelectorAll(".wrapper i");
 
-// DONE
+
 let isDragStart = false, isDragging = false, prevPageX, prevScrollLeft, positionDiff;
 
-// DONE
 const showHideIcons = () => {
   // showing and hiding prev/next icon according to carousel scroll left value
   let scrollWidth = carousel.scrollWidth - carousel.clientWidth; //getting mac scrollable width
@@ -21,7 +21,7 @@ const showHideIcons = () => {
   arrowIcons[1].style.display = carousel.scrollLeft == scrollWidth ? "none" : "block";
 }
 
-//DONE
+
 arrowIcons.forEach(icon => {
   icon.addEventListener("click", () => {
     let firstImgWidth = firstImg.clientWidth + 14; // getting first img width & adding 14 margin value
@@ -32,7 +32,7 @@ arrowIcons.forEach(icon => {
 });
 
 
-//DONE
+
 const autoSlide = () => {
   // if there is no image left to scroll then return from here
   if (carousel.scrollLeft == (carousel.scrollWidth - carousel.clientWidth)) return;
@@ -49,7 +49,7 @@ const autoSlide = () => {
   carousel.scrollLeft -= positionDiff > firstImgWidth / 3 ? valDifference : -positionDiff;
 }
 
-//DONE
+
 const dragStart = (e) => {
   // updating global variable value on mouse down event 
   isDragStart = true;
@@ -58,7 +58,7 @@ const dragStart = (e) => {
 }
 
 
-// DONE
+
 const dragging = (e) => {
   // scrolling images/carousel to left according to mouse pointer
   if (!isDragStart) return;
@@ -70,7 +70,6 @@ const dragging = (e) => {
   showHideIcons();
 }
 
-//DONE
 const dragStop = () => {
   isDragStart = false;
   carousel.classList.remove("dragging");
