@@ -57,7 +57,7 @@ nav {
 .nav-links {
   gap: 2rem;
   list-style: none;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
 }
 
 
@@ -166,8 +166,8 @@ a:hover {
 
 section {
   padding-top: 4vh;
-  height: 96vh;
-  margin: 0 10rem;
+  height: auto;
+  margin: 0 15rem;
   box-sizing: border-box;
   min-height: fit-content;
 }
@@ -198,7 +198,7 @@ section {
 }
 
 .section__text p {
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .section__text__p1 {
@@ -206,12 +206,12 @@ section {
 }
 
 .section__text__p2 {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   margin-bottom: 1rem;
 }
 
 .title {
-  font-size: 3rem;
+  font-size: 2.25rem;
   text-align: center;
 }
 
@@ -351,8 +351,8 @@ section {
 
 .experience-sub-title {
   color: rgb(58, 14, 14);
-  font-weight: 600;
-  font-size: 1.75rem;
+  font-weight: 400;
+  font-size: 1.25rem;
   margin-bottom: 2rem;
 }
 
@@ -445,7 +445,7 @@ height: fit-content;
   background: rgba(255, 255, 255, 0.58);
   position: relative;
   border-radius: 6px;
-  font-size: 15px;
+  font-size: 14px;
 }
 
 .left-container {
@@ -496,7 +496,7 @@ height: fit-content;
 }
 
 .text-box h2 {
-  font-weight: 600;
+  font-weight: 400;
 }
 
 .text-box small {
@@ -525,7 +525,7 @@ height: fit-content;
   border-top: 15px solid transparent;
   border-bottom: 15px solid transparent;
   border-right: 15px solid rgba(255, 255, 255, 0.58);
-  left: -15px;
+  left: -14px;
 }
 
 @media screen and (max-width: 600px) {
